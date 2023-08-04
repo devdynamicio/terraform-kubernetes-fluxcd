@@ -13,7 +13,7 @@ This module requires Terraform version `0.13.0` or newer.
 ```hcl
 module "fluxcd" {
   source = "../../"
-  flux_version = "2.8.2"
+  flux_version = "2.9.2"
 }
 ```
 
