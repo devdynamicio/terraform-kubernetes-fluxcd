@@ -45,7 +45,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_flux_version"></a> [flux\_version](#input\_flux\_version) | FluxCD version | `string` | `"2.8.2"` | no |
+| <a name="input_flux_version"></a> [flux\_version](#input\_flux\_version) | FluxCD version | `string` | `"2.9.2"` | no |
 
 ## Outputs
 

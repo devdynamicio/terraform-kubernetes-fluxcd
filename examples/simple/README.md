@@ -7,6 +7,7 @@ Deploy Flux in Kubernetes cluster via terraform.
 To run this example you need to execute:
 
 ```bash
+$ minikube start
 $ terraform init
 $ terraform plan
 $ terraform apply
