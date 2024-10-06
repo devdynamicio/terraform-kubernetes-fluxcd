@@ -1,13 +1,16 @@
 # Simple Flux terraform example
 
-Deploy Flux in Kubernetes cluster via terraform.
+Deploy Flux in Kubernetes cluster via terraform + automatic sync to github repository.
+
+## Before run requirements
+
+Before applying via terraform, please run docker daemon on local machine and obtain *GITHIB_TOKEN*
 
 ## Usage
 
 To run this example you need to execute:
 
 ```bash
-$ minikube start
 $ terraform init
 $ terraform plan
 $ terraform apply
@@ -19,11 +22,17 @@ $ terraform apply
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
-| <a name="requirement_helm"></a> [helm](#requirement\_helm) | >= 1.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | >= 6.1 |
+| <a name="requirement_helm"></a> [helm](#requirement\_helm) | >=2.9.0 |
+| <a name="requirement_kind"></a> [kind](#requirement\_kind) | >= 0.4 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | >= 2.27 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_kind"></a> [kind](#provider\_kind) | >= 0.4 |
 
 ## Modules
 
@@ -33,7 +42,9 @@ No providers.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [kind_cluster.this](https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster) | resource |
 
 ## Inputs
 
